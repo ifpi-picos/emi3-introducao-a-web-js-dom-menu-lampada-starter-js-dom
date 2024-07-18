@@ -12,3 +12,22 @@ imagem1.addEventListener("click", function () {
 });
 
 // Imagem 2
+const imagem2 = document.getElementById("lampada-02");
+imagem2.addEventListener("mouseover", function () {
+  imagem2.src = "img/lampada-on.jpg";
+});
+const imagem = document.getElementById("lampada-02");
+imagem2.addEventListener("mouseout", function () {
+  imagem2.src = "img/lampada.jpg";
+});
+var btn = document.querySelector("button");
+
+function random(number) {
+  return Math.floor(Math.random() * (number + 1));
+}
+
+btn.onclick = function () {
+  var rndCol =
+    "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
+  document.body.style.backgroundColor = rndCol;
+};
